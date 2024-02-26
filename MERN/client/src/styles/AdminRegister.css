@@ -1,0 +1,123 @@
+/* AdminRegister.css */
+
+/* Navigation styles */
+nav {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between navigation items */
+}
+
+nav ul li a {
+  color: #fff; /* White text color for links */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Container styles */
+.container {
+  max-width: 800px; /* Adjust as needed */
+  margin: 0 auto; /* Center container horizontally */
+  padding: 20px;
+}
+
+/* Image styles */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px; /* Adjust spacing */
+}
+
+
+/* AdminRegister.css */
+
+/* Navigation styles */
+nav {
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  padding: 10px 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px; /* Adjust spacing between navigation items */
+}
+
+nav ul li a {
+  color: #fff; /* White text color for links */
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+
+/* Container styles */
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.camera {
+  max-width: 100%;
+  margin-top: 20px; /* Adjust spacing */
+}
+
+.scanned-values {
+  margin-top: 20px; /* Adjust spacing */
+}
+
+/* Table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th, table td {
+  padding: 8px;
+  border: 1px solid #ddd; /* Light gray border */
+}
+
+table th {
+  background-color: #f2f2f2; /* Light gray background for header */
+  font-weight: bold;
+  text-align: left;
+}
+
+/* Status bar styles */
+.status-bar {
+  margin-top: 20px; /* Adjust spacing */
+}
+
+.status-bar button {
+  padding: 10px 20px;
+  background-color: #333; /* Dark background color */
+  color: #fff; /* White text color */
+  border: none;
+  cursor: pointer;
+}
+
+.status-bar button:hover {
+  background-color: #555; /* Darker background color on hover */
+}

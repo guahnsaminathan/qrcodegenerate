@@ -1,0 +1,52 @@
+/* AdminRegister.css */
+
+/* Centering all elements */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Adjust as needed */
+  }
+  
+  .wrapper {
+    width: 100%;
+  }
+  
+  /* Styles for form labels */
+  .label {
+    font-weight: bold;
+    color: #333333; /* Dark gray text color for labels */
+    margin-bottom: 5px;
+    display: block; /* Ensures each label appears on a new line */
+  }
+  
+  /* Styles for form inputs */
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da; /* Light gray border */
+    border-radius: 5px;
+    margin-bottom: 15px;
+  }
+  
+  /* Styles for buttons */
+  .btn-primary {
+    background-color: #000000; /* Black background */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: #333333; /* Dark gray background on hover */
+  }
+  
+  /* Styles for heading */
+  .heading-section {
+    text-align: center;
+    padding-bottom: 100px; /* Center the text */
+  }
+  

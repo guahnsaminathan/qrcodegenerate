@@ -1,0 +1,55 @@
+import React, { useEffect, useRef } from 'react';
+import jsQR from 'jsqr';
+
+function AdminRegister() {
+  const videoRef = useRef(null);
+  const scanResultRef = useRef(null);
+
+  useEffect(() => {
+   
+    navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } })
+      .then(stream => {
+        videoRef.current.srcObject = stream;
+        videoRef.current.play();
+        scan();
+      })
+      .catch(err => console.error('Error accessing the camera:', err));
+  }, []);
+
+  const scan = () => {
+    const video = videoRef.current;
+    const scanResult = scanResultRef.current;
+    const canvas = document.createElement('canvas');
+    const context = canvas.getContext('2d');
+
+    const scanInterval = setInterval(() => {
+      if (!video) return;
+
+      const videoWidth = video.videoWidth;
+      const videoHeight = video.videoHeight;
+      canvas.width = videoWidth;
+      canvas.height = videoHeight;
+
+      context.drawImage(video, 0, 0, videoWidth, videoHeight);
+      const imageData = context.getImageData(0, 0, videoWidth, videoHeight);
+      const code = jsQR(imageData.data, imageData.width, imageData.height, {
+        inversionAttempts: 'dontInvert',
+      });
+      if (code) {
+        console.log('Found QR code:', code.data);
+        scanResult.innerText = 'Scanned: ' + code.data;
+      }
+    }, 1000);
+
+    return () => clearInterval(scanInterval);
+  };
+
+  return (
+    <div>
+      <video ref={videoRef} width="100%" height="auto" playsInline></video>
+      <div ref={scanResultRef}></div>
+    </div>
+  );
+}
+
+export default AdminRegister;
